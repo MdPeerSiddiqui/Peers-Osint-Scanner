@@ -3,10 +3,10 @@
     "program": "Sqrock IT Solution \u2014 Alpha 2 Cybersecurity Internship",
     "target": "google.com",
     "target_type": "Domain",
-    "timestamp": "2026-10-20T13:24:07.665714",
+    "timestamp": "2026-10-20T13:28:02.139253",
     "dns": {
         "domain": "google.com",
-        "ip_address": "142.250.77.142"
+        "ip_address": "142.251.223.238"
     },
     "whois": {
         "registrar": "MarkMonitor, Inc.",
@@ -22,10 +22,10 @@
     "geolocation": {
         "country": "United States",
         "country_code": "US",
-        "region": "California",
-        "city": "Mountain View",
-        "coordinates": "37.4225, -122.085",
-        "timezone": "America/Los_Angeles",
+        "region": "Connecticut",
+        "city": "New Haven",
+        "coordinates": "41.3186, -72.9302",
+        "timezone": "America/New_York",
         "isp": "Google LLC",
         "organization": "Google LLC",
         "asn": "AS15169 Google LLC"
