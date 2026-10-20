@@ -1,54 +1,54 @@
 # 💼 LinkedIn Showcase & Proof of Work Guide
 
-How to document and publish your 15-day Sqrock Cybersecurity Internship on LinkedIn so recruiters and cybersecurity managers see genuine hands-on technical competence.
+How to document and publish **PEER'S OSINT Scanner** and your 15-day Sqrock Cybersecurity Internship on LinkedIn so recruiters, security engineers, and hiring managers recognize genuine technical craftsmanship.
 
 ---
 
 ## 📸 1. Capturing Practical Proof (Screenshots)
 
-Recruiters look for proof that **you ran the code yourself**:
-1. **Terminal Output**: Run the script in your terminal and take a clean screenshot using **`Windows Key + Shift + S`**.
-2. **Code Snippet**: Show the key logic (e.g. `socket.gethostbyname()`, `whois.whois()`).
-3. **Save your screenshots**: Save them in the `screenshots/` directory (e.g., `screenshots/day01_terminal.png`) so you can link them in your GitHub README and Markdown reports.
+To show genuine hands-on work:
+1. **Terminal Screenshot**:
+   - Run:
+     ```powershell
+     .\.venv\Scripts\python.exe peers_scanner.py google.com
+     ```
+   - Press **`Windows Key + Shift + S`** to snip the terminal showing the colorful **PEER'S OSINT SCANNER** banner, the resolved Google data, and the success card.
+2. **Side-by-Side Code Screenshot**:
+   - Split your screen with VS Code on the left showing `peers_scanner.py` and the terminal on the right.
+3. **Save to Repo**:
+   - Save the image to `screenshots/peers_scanner_demo.png`.
 
 ---
 
-## 📝 2. Winning Post Structure for Each Day
+## 🎯 2. Ready-to-Publish LinkedIn Post (Day 1)
 
-Every strong cybersecurity post on LinkedIn follows this 4-step framework:
-
-1. **Catchy Hook**: What did you build today?
-2. **The Security Problem**: Why does this matter in real-world attacks/defense?
-3. **Technical Execution**: What Python tools/libraries were used?
-4. **Attacker vs. Defender Insight**: Why defense matters and how organizations protect against it.
-5. **Tags & GitHub Link**: Link to your repo so people can see your clean commits.
-
----
-
-## 🎯 3. Ready-to-Use LinkedIn Template (Day 1)
+Copy and paste this directly on LinkedIn:
 
 ```text
-🚀 Day 1 of my 15-Day Cybersecurity Internship with Sqrock IT Solution!
+🚀 Excited to launch PEER'S OSINT Scanner — Day 1 of my Cybersecurity Internship at Sqrock IT Solution! 🛰️🔍
 
-Today’s focus: Passive Reconnaissance & OSINT using Python 🐍🔍
+Before an adversary launches a targeted social engineering or cyber attack, they perform passive reconnaissance to gather intelligence without touching the target's internal security perimeter.
 
-Before any social engineering or cyber attack occurs, adversaries perform extensive reconnaissance to profile their target without triggering security alarms. Today, I built an automated OSINT tool in Python that extracts vital domain intelligence passively.
+To simulate and understand this phase, I built "PEER'S OSINT Scanner", a modular Python-based reconnaissance tool that passively fingerprints domains and IP addresses.
 
-🛠️ What the tool does:
-• DNS Resolution: Resolves target domain to IP address using Python's socket library.
-• WHOIS Extraction: Identifies domain registrar, creation date, and expiration window.
-• IP Geolocation: Maps hosting server coordinates and ISP provider via IP-API.
+⚡ Key Features:
+• Dual-Target Recognition: Dynamically handles both FQDN domains and raw IPv4/IPv6 addresses.
+• Forward & Reverse DNS: Automates A record lookup and reverse PTR hostname resolution.
+• WHOIS Extraction: Scrapes registry metadata, domain creation/expiration windows, and authoritative Name Servers.
+• Geolocation & ASN Mapping: Tracks server geography (Country, Region, City, Coordinates) and identifies ISP & Autonomous System Numbers.
+• Passive Threat Fingerprinting: Identifies reverse proxies (Cloudflare WAF) and cloud infrastructure (AWS / GCP).
+• Audit Deliverables: Automatically saves structured JSON reports for SOC and threat-intel logs.
 
 🛡️ Attacker vs. Defender Perspective:
-• Attacker View: Identifying registrar and CDN/hosting providers reveals renewal windows and external infrastructure dependencies.
-• Defender View: Security teams must monitor WHOIS privacy, audit exposed DNS records, and watch for typosquatting domains.
+• Attacker View: Mapping registrar and renewal windows enables domain hijacking/squatting strategies; ASN details reveal hosting dependencies.
+• Defender View: Organizations must enforce WHOIS privacy, audit DNS records against spoofing, and ensure cloud providers deploy hardened WAF configurations.
 
-📌 Deliverables completed:
-- Functional Python OSINT script
-- 1-page technical reconnaissance report
-- Execution logs verified on lab domain (example.com)
+💻 Open-Source GitHub Repository:
+👉 [Insert your GitHub repo link here]
 
-👉 All activities conducted strictly within authorized educational lab environments adhering to IT Act 2000 & CFAA guidelines.
+All experiments were conducted strictly within authorized lab environments following ethical hacking standards and IT Act 2000 / CFAA compliance.
 
-#Cybersecurity #Python #OSINT #InfoSec #Internship #Sqrock #SocialEngineering #EthicalHacking #BlueTeam #Reconnaissance
+Big thanks to Sqrock IT Solution for this hands-on cybersecurity curriculum!
+
+#Cybersecurity #OSINT #Python #InformationSecurity #EthicalHacking #SqrockITSolution #Internship #ThreatIntelligence #BlueTeam #Reconnaissance #Networking
 ```

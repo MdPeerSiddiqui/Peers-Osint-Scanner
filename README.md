@@ -1,88 +1,183 @@
-# 🛡️ Sqrock CyberSec Toolkit — Social Engineering Simulation Suite
-> **Alpha 2 Internship — Cybersecurity Track (Phase 1)**  
-> **Issuing Body:** Sqrock IT Solution  
-> **Core Focus:** Practical Social Engineering Attack & Defense Tools in Python
+# 🛰️ PEER'S OSINT SCANNER
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue?style=for-the-badge&logo=python" alt="Python Version" />
+  <img src="https://img.shields.io/badge/Track-Cybersecurity%20Alpha%202-red?style=for-the-badge&logo=shield" alt="Cybersecurity Track" />
+  <img src="https://img.shields.io/badge/Organization-Sqrock%20IT%20Solution-green?style=for-the-badge" alt="Sqrock IT Solution" />
+  <img src="https://img.shields.io/badge/Status-Production%20Ready-brightgreen?style=for-the-badge" alt="Status" />
+  <img src="https://img.shields.io/badge/License-MIT-lightgrey?style=for-the-badge" alt="License" />
+</p>
+
+```text
+  ____  _____ _____ ____  ____     ___  ____ ___ _   _ _____ 
+ |  _ \| ____| ____|  _ \/ ___|   / _ \/ ___|_ _| \ | |_   _|
+ | |_) |  _| |  _| | |_) \___ \  | | | \___ \| ||  \| | | |  
+ |  __/| |___| |___|  _ < ___) | | |_| |___) | || |\  | | |  
+ |_|   |_____|_____|_| \_\____/   \___/|____/___|_| \_| |_|  
+  ____   ____    _    _   _ _   _ _____ ____                 
+ / ___| / ___|  / \  | \ | | \ | | ____|  _ \                
+ \___ \| |     / _ \ |  \| |  \| |  _| | |_) |               
+  ___) | |___ / ___ \| |\  | |\  | |___|  _ <                
+ |____/ \____/_/   \_\_| \_|_| \_|_____|_| \_\               
+
+ ⚡ PEER'S OSINT SCANNER — Advanced Passive Reconnaissance Suite ⚡
+ [★] Developed under Sqrock IT Solution — Alpha 2 Cybersecurity Internship
+```
+
+**PEER'S OSINT Scanner** is a fast, elegant, and modular passive open-source intelligence (OSINT) tool engineered in Python. It allows cybersecurity analysts, red-teamers, and blue-team defenders to passively fingerprint any **Domain Name** or **IPv4/IPv6 Address** without generating invasive alert traffic on target perimeter firewalls.
 
 ---
 
-## ⚡ Quick Start (Clone & Run in 30 Seconds)
+## ⚡ Highlights & Capabilities
 
-Anyone can clone and run these tools immediately:
+- 🌐 **Dual Target Support**: Automatically detects whether the target is an **FQDN Domain** or an **IPv4/IPv6 Address**.
+- 📡 **DNS & Reverse PTR Routing**:
+  - Resolves forward A records for domains.
+  - Performs reverse DNS PTR lookups for raw IP addresses.
+- 📜 **Deep WHOIS Registry Intelligence**:
+  - Extracts registrar organization, registered creation date, and expiration window.
+  - Lists authoritative primary and secondary Name Servers.
+- 🌍 **Geolocation & Infrastructure Profiling**:
+  - Maps physical server geolocation: Country, City, Region, Zip, and Geographic Coordinates.
+  - Identifies Network Autonomous System Number (ASN), ISP, and parent organization.
+- 🛡️ **Passive Security & Cloud Fingerprinting**:
+  - Flags reverse proxies and WAF protections (e.g., Cloudflare).
+  - Detects major cloud hosting providers (AWS, Google Cloud, Azure).
+- 💾 **Automated Security Reports**:
+  - Automatically exports structured, audit-ready JSON deliverables to `reports/`.
+
+---
+
+## 🚀 Quickstart Guide (Clone & Run in 10 Seconds)
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/social-engineering-toolkit.git
-cd social-engineering-toolkit
+git clone https://github.com/<your-username>/peers-osint-scanner.git
+cd peers-osint-scanner
 ```
 
-### 2. Set Up Virtual Environment & Install Dependencies
+### 2. Set Up Virtual Environment & Dependencies
 ```bash
-# Windows
+# Create and activate virtual environment
 python -m venv .venv
+
+# On Windows:
 .\.venv\Scripts\activate
-pip install -r requirements.txt
 
-# Linux / macOS
-python3 -m venv .venv
+# On Linux / macOS:
 source .venv/bin/activate
+
+# Install required dependencies
 pip install -r requirements.txt
 ```
 
-### 3. Run the Tools
+### 3. Launch PEER'S Scanner
 
-#### Option A: Direct Domain Scan (Day 1 OSINT)
-Type any domain (e.g., `google.com` or `example.com`):
+#### 🎯 Option A: Interactive Mode (Simply prompts for Domain or IP)
 ```bash
-python modules/day01_osint/osint_scanner.py google.com
+python peers_scanner.py
+```
+*The scanner will prompt:*
+```text
+[?] Enter Target Domain or IP Address
+    └── Target > google.com
 ```
 
-#### Option B: Master CLI Launcher
-Launch the interactive suite menu or pass commands:
+#### ⚡ Option B: Direct Command-line Execution
 ```bash
-python main.py osint google.com
+# Scan a domain
+python peers_scanner.py google.com
+
+# Scan an IP address directly
+python peers_scanner.py 8.8.8.8
 ```
 
 ---
 
-## 📂 Project Structure (Human-Readable & Modular)
-
-The project is structured so anyone looking at the files instantly understands their purpose:
+## 🖥️ Live Terminal Preview
 
 ```text
-├── main.py                             # 🚀 Central Interactive CLI Launcher
-├── requirements.txt                    # 📦 Python dependencies
-├── README.md                           # 📖 Project documentation & Quickstart
-│
-├── modules/                            # 🛠️ Day-by-Day Tools (Modular Python Packages)
-│   ├── day01_osint/                    # [Day 01] Passive OSINT & Domain Intelligence
-│   ├── day02_email_harvesting/         # [Day 02] Regex Scraper & Pretexting Prep
-│   ├── day03_phishing_detector/        # [Day 03] URL Phishing Risk Scorer
-│   ├── day04_vishing_smishing/         # [Day 04] Vishing/Smishing Script Engine
-│   ├── day05_target_profiling/         # [Day 05] Public Profile Aggregation Tool
-│   ├── day06_spear_phishing/           # [Day 06] Spear Phishing Template Generator
-│   ├── day07_credential_stuffing/      # [Day 07] Credential Brute-Force & Rate Limiter
-│   ├── day08_usb_drop/                 # [Day 08] Benign USB Drop Payload Simulator
-│   ├── day09_fake_profile_detector/    # [Day 09] Bot / Impersonation Heuristic Scorer
-│   ├── day10_honeypot/                 # [Day 10] Bait Link Honeypot Tracker
-│   ├── day11_awareness_quiz/           # [Day 11] Interactive Security Awareness Quiz
-│   ├── day12_ml_phishing_detection/    # [Day 12] Naive Bayes ML Phishing Classifier
-│   ├── day13_siem_log_analysis/        # [Day 13] SIEM Log Anomaly Parser
-│   ├── day14_incident_response/        # [Day 14] Automated Containment & IR Script
-│   └── day15_capstone_attack_chain/    # [Day 15] Full Attack Chain Simulator (Unified CLI)
-│
-├── reports/                            # 📊 Practical Reports, Deliverables & JSON Logs
-│   ├── day01_osint_report.md
-│   └── osint_google.com.json
-│
-├── screenshots/                        # 📸 Visual Proof of Execution (For LinkedIn & GitHub)
-│
-└── docs/                               # 📜 Guidelines & Trackers
-    ├── ETHICAL_GUIDELINES.md           # Legal & ethical boundaries
-    ├── PROGRESS_TRACKER.md             # 15-day milestone checklist
-    └── LINKEDIN_SHOWCASE_GUIDE.md      # How to showcase practical proof on LinkedIn
+===========================================================================
+[*] TARGET IDENTIFIED : google.com
+[*] TARGET TYPE       : Domain Name
+[*] TIME OF SCAN      : 2026-10-20 13:24:07 UTC
+---------------------------------------------------------------------------
+
+[1] RESOLVING DNS & HOST ROUTING...
+    [+] Target Domain    : google.com
+    [+] Resolved IPv4    : 142.250.77.142
+
+[2] QUERYING WHOIS REGISTRATION INTELLIGENCE...
+    [+] Registrar        : MarkMonitor, Inc.
+    [+] Registered Date  : 1997-09-15 04:00:00+00:00
+    [+] Expiration Date  : 2028-09-14 04:00:00+00:00
+    [+] Name Servers     : NS1.GOOGLE.COM, NS2.GOOGLE.COM, NS3.GOOGLE.COM
+
+[3] GEOLOCATION, ASN & INFRASTRUCTURE DATA...
+    [+] Country          : United States (US)
+    [+] City / Region    : Mountain View, California
+    [+] Coordinates      : 37.4225, -122.085
+    [+] ISP Provider     : Google LLC
+    [+] Organization     : Google LLC
+    [+] AS Number        : AS15169 Google LLC
+    [i] Cloud Provider   : Google Cloud Infrastructure
+
+===========================================================================
+                      ✔ SCAN COMPLETED SUCCESSFULLY
+===========================================================================
+
+[★] Structured JSON Report Saved  : reports/peers_scan_google.com.json
 ```
 
 ---
 
-## ⚖️ Ethical & Legal Compliance Notice
-This repository is developed for **educational, defensive, and authorized awareness training purposes only**. All exercises are executed against authorized lab domains or local test harnesses (`localhost`). Unauthorized scanning, phishing, or testing against third-party systems without prior explicit written permission violates the Indian Information Technology Act (2000), US Computer Fraud and Abuse Act (CFAA), and international cybersecurity laws. See [`docs/ETHICAL_GUIDELINES.md`](docs/ETHICAL_GUIDELINES.md).
+## 📂 Project Architecture
+
+The directory structure is organized with clean separation of modules, reports, and documentation:
+
+```text
+peers-osint-scanner/
+├── peers_scanner.py                    # 🚀 Primary PEER'S Scanner CLI Tool
+├── main.py                             # 🎛️ Master 15-Day Internship Suite Launcher
+├── requirements.txt                    # 📦 Python Dependencies
+├── README.md                           # 📖 Project Documentation & Showcase
+│
+├── modules/                            # 🧩 Modular Subpackages
+│   ├── day01_osint/                    # Day 1 OSINT Module (Peer's Scanner Core)
+│   ├── day02_email_harvesting/         # Day 2 Email Harvester
+│   ├── day03_phishing_detector/        # Day 3 Phishing Risk Scorer
+│   └── ...                             # Days 04 to 15
+│
+├── reports/                            # 📊 Audit-ready JSON Reports & Deliverables
+│   ├── day01_osint_report.md           # Formal 1-page internship report
+│   ├── peers_scan_google.com.json      # Verified scan result
+│   └── peers_scan_8.8.8.8.json         # IP lookup result
+│
+├── screenshots/                        # 📸 Practical Proof of Execution (Terminal & Code)
+│
+└── docs/                               # 📜 Professional Documentation
+    ├── ETHICAL_GUIDELINES.md           # Legal & ethical boundaries (IT Act 2000 & CFAA)
+    ├── PROGRESS_TRACKER.md             # 15-Day Milestone Progress Tracker
+    └── LINKEDIN_SHOWCASE_GUIDE.md      # Step-by-step LinkedIn portfolio guide
+```
+
+---
+
+## 🛡️ Attacker vs. Defender Security Insights
+
+| Perspective | Security Application |
+| :--- | :--- |
+| **Attacker (Adversary Profile)** | Identifies domain expiration dates for domain hijacking/squatting, maps external CDN providers to find bypass opportunities, and analyzes geolocation to craft geo-targeted phishing lures. |
+| **Defender (Security Team)** | Audits WHOIS privacy disclosure, validates DNS record integrity against spoofing, verifies reverse PTR records, and ensures external cloud providers deploy proper DDoS/WAF safeguards. |
+
+---
+
+## 🏛️ Internship Program Context
+This tool was engineered for **Day 1** of the **Alpha 2 Internship — Cybersecurity Track** hosted by **Sqrock IT Solution**.  
+* **Curriculum Focus**: Social Engineering Attack Simulations & Defense Using Python (15-Day Calendar).
+
+---
+
+## ⚖️ Legal Disclaimer & Ethics
+**FOR AUTHORIZED LAB AND EDUCATIONAL USE ONLY.**  
+This tool utilizes publicly available, non-intrusive DNS and WHOIS endpoints. It does not perform invasive port scanning, packet injection, or exploitation. All activities must comply with the Indian Information Technology Act (2000), the United States Computer Fraud and Abuse Act (CFAA), and global data protection standards.

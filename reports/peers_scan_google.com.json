@@ -1,0 +1,36 @@
+{
+    "tool": "PEER'S OSINT Scanner",
+    "program": "Sqrock IT Solution \u2014 Alpha 2 Cybersecurity Internship",
+    "target": "google.com",
+    "target_type": "Domain",
+    "timestamp": "2026-10-20T13:24:07.665714",
+    "dns": {
+        "domain": "google.com",
+        "ip_address": "142.250.77.142"
+    },
+    "whois": {
+        "registrar": "MarkMonitor, Inc.",
+        "creation_date": "1997-09-15 04:00:00+00:00",
+        "expiration_date": "2028-09-14 04:00:00+00:00",
+        "name_servers": [
+            "NS1.GOOGLE.COM",
+            "NS2.GOOGLE.COM",
+            "NS3.GOOGLE.COM",
+            "NS4.GOOGLE.COM"
+        ]
+    },
+    "geolocation": {
+        "country": "United States",
+        "country_code": "US",
+        "region": "California",
+        "city": "Mountain View",
+        "coordinates": "37.4225, -122.085",
+        "timezone": "America/Los_Angeles",
+        "isp": "Google LLC",
+        "organization": "Google LLC",
+        "asn": "AS15169 Google LLC"
+    },
+    "threat_intel": {
+        "cloud": "Google Cloud Infrastructure"
+    }
+}
