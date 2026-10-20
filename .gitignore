@@ -6,7 +6,7 @@ __pycache__/
 
 # Local Backup & Internship PDF (Kept safely on local PC only)
 _curriculum_backup/
-*.pdf
+Sqrock_Cybersecurity_Internship_phase1.pdf
 
 # System & IDE
 .vscode/
