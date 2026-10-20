@@ -1,0 +1,19 @@
+# Python Environment
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Data & Output logs
+*.log
+recon_log.txt
+ir_report.json
+*.tmp
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

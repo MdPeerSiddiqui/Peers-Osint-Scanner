@@ -1,0 +1,27 @@
+{
+    "target_domain": "google.com",
+    "timestamp": "2026-10-20T13:15:56.604876",
+    "dns": {
+        "ip_address": "142.250.77.142"
+    },
+    "whois": {
+        "registrar": "MarkMonitor, Inc.",
+        "creation_date": "1997-09-15 04:00:00+00:00",
+        "expiration_date": "2028-09-14 04:00:00+00:00",
+        "name_servers": [
+            "NS1.GOOGLE.COM",
+            "NS2.GOOGLE.COM",
+            "NS3.GOOGLE.COM",
+            "NS4.GOOGLE.COM"
+        ]
+    },
+    "geolocation": {
+        "country": "United States",
+        "country_code": "US",
+        "region": "California",
+        "city": "Mountain View",
+        "isp": "Google LLC",
+        "org": "Google LLC",
+        "as": "AS15169 Google LLC"
+    }
+}

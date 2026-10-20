@@ -1,0 +1,10 @@
+# Sqrock IT Solution — Cybersecurity Internship Track (Phase 1)
+# Dependencies
+
+requests>=2.31.0
+python-whois>=0.9.0
+flask>=3.0.0
+scikit-learn>=1.4.0
+pandas>=2.2.0
+numpy>=1.26.0
+colorama>=0.4.6
