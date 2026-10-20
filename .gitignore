@@ -1,18 +1,14 @@
-# Python Environment
+# Environment & Cache
 .venv/
 __pycache__/
 *.py[cod]
 *$py.class
-*.so
-.pytest_cache/
 
-# Data & Output logs
-*.log
-recon_log.txt
-ir_report.json
-*.tmp
+# Local Backup & Internship PDF (Kept safely on local PC only)
+_curriculum_backup/
+*.pdf
 
-# IDE & OS
+# System & IDE
 .vscode/
 .idea/
 .DS_Store
