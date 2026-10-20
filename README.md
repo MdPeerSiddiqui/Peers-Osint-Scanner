@@ -1,21 +1,22 @@
 <div align="center">
 
 # 🛰️ PEER'S OSINT SCANNER
-### *Passive Open-Source Intelligence & Reconnaissance Tool*
+### *Automated Passive Reconnaissance & Intelligence Engine*
 
-[![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Organization](https://img.shields.io/badge/Sqrock%20IT%20Solution-Cybersecurity-00C853?style=for-the-badge)](https://github.com/MdPeerSiddiqui/Peers-Osint-Scanner)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Track](https://img.shields.io/badge/Track-Cybersecurity%20Alpha%202-red?style=for-the-badge&logo=shield)](https://github.com/MdPeerSiddiqui/Peers-Osint-Scanner)
+[![Organization](https://img.shields.io/badge/Issuing%20Body-Sqrock%20IT%20Solution-00C853?style=for-the-badge)](https://github.com/MdPeerSiddiqui/Peers-Osint-Scanner)
 [![License](https://img.shields.io/badge/License-MIT-orange?style=for-the-badge)](LICENSE)
 
 <p align="center">
-  <b>Developed by <a href="https://github.com/MdPeerSiddiqui">Md Peer Siddiqui</a> | Sqrock IT Solution Internship</b>
+  <b>Engineered by <a href="https://github.com/MdPeerSiddiqui">Md Peer Siddiqui</a> under Sqrock IT Solution — Alpha 2 Internship</b>
 </p>
 
 ---
 
 </div>
 
-## 🖥️ Terminal Preview
+## 🖥️ Interactive Terminal Interface
 
 ```text
   ____  _____ _____ ____  ____     ___  ____ ___ _   _ _____ 
@@ -68,43 +69,106 @@
 
 ## ⚡ What Does This Tool Do?
 
-**PEER'S OSINT Scanner** is a fast, lightweight, and 100% passive open-source reconnaissance script. It gathers intelligence on any **Domain Name** or **IP Address** without touching the target's internal servers:
+**PEER'S OSINT Scanner** is an open-source, passive reconnaissance tool. It extracts critical intelligence on any **Domain Name** or **IP Address** without generating invasive alert traffic on target systems:
 
-* **Dual Target Detection**: Automatically identifies if you entered a Domain or an IP address.
-* **DNS & Reverse Routing**: Resolves forward IPv4 A-records or performs reverse PTR lookups for raw IPs.
-* **WHOIS Extraction**: Scrapes registrar, registration date, renewal/expiration date, and Name Servers.
-* **Geolocation & ASN**: Maps physical location (Country, City, Coordinates), ISP, and Autonomous System Numbers.
-* **Cloud & Proxy Detection**: Automatically flags Cloudflare WAF reverse proxies, AWS, and Google Cloud infrastructure.
-* **Audit Deliverables**: Saves clean, structured JSON deliverables into the `reports/` folder.
+* 🌐 **Dual Target Detection**: Intelligently differentiates between FQDNs (e.g., `example.com`) and raw IP addresses (e.g., `93.184.215.14` or `8.8.8.8`).
+* 📡 **DNS & Reverse Routing**: Resolves forward IPv4 A-records and performs reverse DNS PTR lookups.
+* 📜 **Deep WHOIS Extraction**: Queries registrar data, registration timestamps, expiration windows, and authoritative Name Servers.
+* 🌍 **Geolocation & ASN Metrics**: Maps geographic location (Country, City, Coordinates), ISP, and Autonomous System Numbers.
+* 🛡️ **Passive Security Fingerprinting**: Automatically flags Cloudflare WAF reverse proxies, AWS, and Google Cloud infrastructure.
+* 💾 **Automated Security Reports**: Auto-exports structured, audit-ready JSON deliverables to `reports/`.
 
 ---
 
-## 🚀 How to Clone and Run (3 Simple Steps)
+## 🚀 Installation Guide (Cross-Platform)
 
-### Step 1: Clone the Repository
+### 🐧 Option 1: Linux / Kali Linux
+
+Open your terminal and run:
+
 ```bash
+# 1. Update package list and install git & python3-pip
+sudo apt update && sudo apt install -y git python3 python3-pip python3-venv
+
+# 2. Clone the repository
 git clone https://github.com/MdPeerSiddiqui/Peers-Osint-Scanner.git
 cd Peers-Osint-Scanner
-```
 
-### Step 2: Install Requirements
-```bash
+# 3. Create and activate a virtual environment
+python3 -m venv .venv
+source .venv/bin/activate
+
+# 4. Install dependencies
 pip install -r requirements.txt
+
+# 5. Run the scanner
+python3 peers_scanner.py
 ```
 
-### Step 3: Run the Scanner
+---
 
-#### Option A: Interactive Mode (Enter domain when prompted)
-```bash
+### 🪟 Option 2: Windows (PowerShell or Command Prompt)
+
+Open PowerShell and run:
+
+```powershell
+# 1. Clone the repository
+git clone https://github.com/MdPeerSiddiqui/Peers-Osint-Scanner.git
+cd Peers-Osint-Scanner
+
+# 2. Create and activate virtual environment
+python -m venv .venv
+.\.venv\Scripts\activate
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Run the scanner
 python peers_scanner.py
 ```
 
-#### Option B: Direct Command
+---
+
+### 🍎 Option 3: macOS (Apple Silicon / Intel)
+
+Open Terminal and run:
+
 ```bash
-# Scan a domain
+# 1. Clone the repository
+git clone https://github.com/MdPeerSiddiqui/Peers-Osint-Scanner.git
+cd Peers-Osint-Scanner
+
+# 2. Create and activate virtual environment
+python3 -m venv .venv
+source .venv/bin/activate
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Run the scanner
+python3 peers_scanner.py
+```
+
+---
+
+## 🎮 How to Use
+
+### 1. Interactive Mode (Prompts for target)
+```bash
+python peers_scanner.py
+```
+*Prompt:*
+```text
+[?] Enter Target Domain or IP Address (e.g. example.com)
+    └── Target > example.com
+```
+
+### 2. Direct Command-Line Mode
+```bash
+# Scan a domain name (RFC 2606 lab domain)
 python peers_scanner.py example.com
 
-# Or scan an IP address
+# Scan an IPv4 address directly
 python peers_scanner.py 8.8.8.8
 ```
 
@@ -114,8 +178,8 @@ python peers_scanner.py 8.8.8.8
 
 ```text
 Peers-Osint-Scanner/
-├── peers_scanner.py                # 🚀 The PEER'S OSINT Scanner tool
-├── requirements.txt                # 📋 Python dependencies (requests, whois, colorama)
+├── peers_scanner.py                # 🚀 The PEER'S OSINT Scanner CLI Tool
+├── requirements.txt                # 📋 Python dependencies (requests, python-whois, colorama)
 ├── README.md                       # 📖 Tool documentation & quickstart
 ├── LICENSE                         # ⚖️ MIT Open Source License
 └── reports/                        # 📊 Saved scan deliverables
@@ -125,11 +189,18 @@ Peers-Osint-Scanner/
 
 ---
 
-## 🏛️ Project Details
-* **Author:** [Md Peer Siddiqui](https://github.com/MdPeerSiddiqui)
-* **Organization:** Sqrock IT Solution
-* **Internship Program:** Alpha 2 Internship — Cybersecurity Track
-* **Phase:** Day 1 Practical Tool
+## 🛡️ Attacker vs. Defender Security Insights
+
+| Dimension | Attacker Perspective | Defender Perspective |
+| :--- | :--- | :--- |
+| **Registrar & Expiration** | Finds expired domains for hijacking and typosquatting lures. | Enforces auto-renewals, registry locks, and WHOIS privacy shields. |
+| **DNS & Host Routing** | Uncovers origin IPs behind CDNs to bypass WAF barriers. | Uses Authenticated Origin Pulls and strict security rules. |
+| **Geolocation & ASN** | Identifies geographic locations to craft localized pretexting lures. | Enforces geo-blocking and network segmentation. |
+
+---
+
+## 🏛️ Internship Program Attribution
+This tool was engineered for **Day 1** of the **Alpha 2 Internship — Cybersecurity Track** organized by **Sqrock IT Solution**.
 
 ---
 
