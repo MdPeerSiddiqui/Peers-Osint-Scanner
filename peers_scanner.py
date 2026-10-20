@@ -258,7 +258,7 @@ def main():
     # If no target passed as argument, interactively ask the user
     if not target:
         try:
-            print(f"{C_YELLOW}[?] Enter Target Domain or IP Address{C_RESET}")
+            print(f"{C_YELLOW}[?] Enter Target Domain or IP Address (e.g. example.com){C_RESET}")
             target = input(f"{C_CYAN}    └── Target > {C_RESET}").strip()
         except (KeyboardInterrupt, EOFError):
             print(f"\n{C_RED}[!] Scan aborted by user.{C_RESET}")

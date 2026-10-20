@@ -15,16 +15,58 @@
 
 ---
 
-### 🖥️ Animated Terminal Demo
-*(See how PEER'S Scanner fingerprint targets in real-time with zero intrusion)*
+</div>
 
-<p align="center">
-  <img src="assets/terminal_demo.svg" alt="PEER'S OSINT Scanner Live Terminal Animation" width="850"/>
-</p>
+## 🖥️ Live Terminal Interface
+
+```text
+  ____  _____ _____ ____  ____     ___  ____ ___ _   _ _____ 
+ |  _ \| ____| ____|  _ \/ ___|   / _ \/ ___|_ _| \ | |_   _|
+ | |_) |  _| |  _| | |_) \___ \  | | | \___ \| ||  \| | | |  
+ |  __/| |___| |___|  _ < ___) | | |_| |___) | || |\  | | |  
+ |_|   |_____|_____|_| \_\____/   \___/|____/___|_| \_| |_|  
+  ____   ____    _    _   _ _   _ _____ ____                 
+ / ___| / ___|  / \  | \ | | \ | | ____|  _ \                
+ \___ \| |     / _ \ |  \| |  \| |  _| | |_) |               
+  ___) | |___ / ___ \| |\  | |\  | |___|  _ <                
+ |____/ \____/_/   \_\_| \_|_| \_|_____|_| \_\               
+
+ ⚡ PEER'S OSINT SCANNER v1.0 — Passive Reconnaissance Suite ⚡
+ [★] Developed for Sqrock IT Solution | Alpha 2 Cybersecurity Internship
+===========================================================================
+
+[*] TARGET IDENTIFIED : example.com
+[*] TARGET TYPE       : Domain Name
+[*] TIME OF SCAN      : 2026-10-20 13:45:59 UTC
+---------------------------------------------------------------------------
+
+[1] RESOLVING DNS & HOST ROUTING...
+    [+] Target Domain    : example.com
+    [+] Resolved IPv4    : 104.20.23.154
+
+[2] QUERYING WHOIS REGISTRATION INTELLIGENCE...
+    [+] Registrar        : RESERVED-Internet Assigned Numbers Authority
+    [+] Registered Date  : 1995-08-14 04:00:00+00:00
+    [+] Expiration Date  : 2027-08-13 04:00:00+00:00
+    [+] Name Servers     : ELLIOTT.NS.CLOUDFLARE.COM, HERA.NS.CLOUDFLARE.COM
+
+[3] GEOLOCATION, ASN & INFRASTRUCTURE DATA...
+    [+] Country          : Canada (CA)
+    [+] City / Region    : Toronto, Ontario
+    [+] Coordinates      : 43.6532, -79.3832
+    [+] ISP Provider     : Cloudflare, Inc.
+    [+] Organization     : Cloudflare, Inc.
+    [+] AS Number        : AS13335 Cloudflare, Inc.
+    [i] Security Posture : Cloudflare WAF / Reverse Proxy Protection
+
+===========================================================================
+                      ✔ SCAN COMPLETED SUCCESSFULLY
+===========================================================================
+
+[★] Structured JSON Report Saved  : reports/peers_scan_example.com.json
+```
 
 ---
-
-</div>
 
 ## 📌 What is PEER'S OSINT Scanner?
 
@@ -36,7 +78,7 @@
 
 | Feature | Description |
 | :--- | :--- |
-| 🌐 **Dual Target Recognition** | Intelligently differentiates between FQDNs (e.g., `google.com`) and raw IP addresses (e.g., `8.8.8.8`). |
+| 🌐 **Dual Target Recognition** | Intelligently differentiates between FQDNs (e.g., `example.com`) and raw IP addresses (e.g., `93.184.215.14`). |
 | 📡 **DNS & Reverse PTR** | Resolves forward IPv4 A records and performs reverse DNS PTR hostname resolution. |
 | 📜 **Deep WHOIS Intelligence** | Pulls authoritative registrar details, creation timestamps, renewal/expiration dates, and NameServers. |
 | 🌍 **Geolocation & ASN Metrics** | Queries geographic coordinates, city, region, country code, ISP provider, and Autonomous System Numbers. |
@@ -78,7 +120,7 @@ pip install -r requirements.txt
 *(Optional: Install globally as an executable command)*:
 ```bash
 pip install -e .
-# You can now type 'peers-scanner google.com' anywhere in your terminal!
+# You can now type 'peers-scanner example.com' anywhere in your terminal!
 ```
 
 ---
@@ -92,18 +134,18 @@ python peers_scanner.py
 ```
 You will be greeted by the cyber banner and asked:
 ```text
-[?] Enter Target Domain or IP Address
-    └── Target > google.com
+[?] Enter Target Domain or IP Address (e.g. example.com)
+    └── Target > example.com
 ```
 
 ### Method 2: Direct Command-line Execution
-Scan any domain or IP instantly by passing it directly:
+Scan any authorized lab domain or IP instantly by passing it directly:
 ```bash
-# Scan a domain name
-python peers_scanner.py google.com
+# Scan a domain name (RFC 2606 lab domain)
+python peers_scanner.py example.com
 
 # Scan an IPv4 address directly
-python peers_scanner.py 8.8.8.8
+python peers_scanner.py 93.184.215.14
 ```
 
 ### Method 3: Internship Suite Master Launcher
@@ -121,33 +163,29 @@ The directory structure is organized with clean separation of code, documentatio
 ```text
 Peers-Osint-Scanner/
 │
-├── peers_scanner.py               # 🚀 Main Standalone PEER'S OSINT Scanner
-├── main.py                        # 🎛️ Master 15-Day Internship Suite Runner
-├── setup.py                       # 📦 Package configuration for global CLI install
-├── requirements.txt               # 📋 Python dependencies
-├── README.md                      # 📖 GitHub showcase & documentation
-├── LICENSE                        # ⚖️ MIT Open Source License
+├── peers_scanner.py                # 🚀 Main Standalone PEER'S OSINT Scanner
+├── main.py                         # 🎛️ Master 15-Day Internship Suite Runner
+├── setup.py                        # 📦 Package configuration for global CLI install
+├── requirements.txt                # 📋 Python dependencies
+├── README.md                       # 📖 GitHub showcase & documentation
+├── LICENSE                         # ⚖️ MIT Open Source License
 │
-├── assets/
-│   └── terminal_demo.svg          # 🎥 Animated live terminal demo
+├── modules/                        # 🧩 Modular curriculum packages
+│   ├── day01_osint/                # [Day 1] Core OSINT Scanner Module
+│   ├── day02_email_harvesting/     # [Day 2] Email Harvesting & Regex Scraper
+│   ├── day03_phishing_detector/    # [Day 3] URL Phishing Risk Scorer
+│   └── ...                         # Days 04 to 15
 │
-├── modules/                       # 🧩 Modular curriculum packages
-│   ├── day01_osint/               # [Day 1] Core OSINT Scanner Module
-│   ├── day02_email_harvesting/    # [Day 2] Email Harvesting & Regex Scraper
-│   ├── day03_phishing_detector/   # [Day 3] URL Phishing Risk Scorer
-│   └── ...                        # Days 04 to 15
+├── reports/                        # 📊 Exported audit deliverables & JSON reports
+│   ├── day01_osint_report.md       # Official 1-page internship report
+│   └── peers_scan_example.com.json # Live example.com scan deliverable
 │
-├── reports/                       # 📊 Exported audit deliverables & JSON reports
-│   ├── day01_osint_report.md      # Official 1-page internship report
-│   ├── peers_scan_google.com.json # Live Google scan report
-│   └── peers_scan_8.8.8.8.json    # Live Public DNS scan report
+├── screenshots/                    # 📸 Practical Proof of Execution (Terminal & Code)
 │
-├── screenshots/                   # 📸 Practical Proof of Execution (Terminal & Code)
-│
-└── docs/                          # 📜 Guides and Trackers
-    ├── ETHICAL_GUIDELINES.md      # Legal compliance (IT Act 2000, CFAA, GDPR)
-    ├── PROGRESS_TRACKER.md        # 15-Day internship roadmap checklist
-    └── LINKEDIN_SHOWCASE_GUIDE.md # Proven blueprint for LinkedIn portfolio posts
+└── docs/                           # 📜 Guides and Trackers
+    ├── ETHICAL_GUIDELINES.md       # Legal compliance (IT Act 2000, CFAA, GDPR)
+    ├── PROGRESS_TRACKER.md         # 15-Day internship roadmap checklist
+    └── LINKEDIN_SHOWCASE_GUIDE.md  # Proven blueprint for LinkedIn portfolio posts
 ```
 
 ---
@@ -169,7 +207,7 @@ This project was designed and implemented by **[Md Peer Siddiqui](https://github
 
 ## ⚖️ Legal & Ethical Notice
 **FOR EDUCATIONAL, RESEARCH, AND AUTHORIZED AUDITING ONLY.**  
-This tool utilizes publicly available, non-intrusive DNS and WHOIS protocols. It does not perform port exploitation, denial of service, or unauthorized packet injection. All users must comply with the Indian Information Technology Act (2000), US Computer Fraud and Abuse Act (CFAA), and applicable local cyber laws.
+This tool utilizes publicly available, non-intrusive DNS and WHOIS protocols. All tests and examples use `example.com` (IANA / RFC 2606 reserved for documentation and testing) or authorized lab systems. All users must comply with the Indian Information Technology Act (2000), US Computer Fraud and Abuse Act (CFAA), and applicable local cyber laws.
 
 ---
 

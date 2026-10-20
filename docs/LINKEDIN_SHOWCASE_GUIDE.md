@@ -10,9 +10,9 @@ To show genuine hands-on work:
 1. **Terminal Screenshot**:
    - Run:
      ```powershell
-     .\.venv\Scripts\python.exe peers_scanner.py google.com
+     .\.venv\Scripts\python.exe peers_scanner.py example.com
      ```
-   - Press **`Windows Key + Shift + S`** to snip the terminal showing the colorful **PEER'S OSINT SCANNER** banner, the resolved Google data, and the success card.
+   - Press **`Windows Key + Shift + S`** to snip the terminal showing the colorful **PEER'S OSINT SCANNER** banner, the resolved `example.com` data, and the success card.
 2. **Side-by-Side Code Screenshot**:
    - Split your screen with VS Code on the left showing `peers_scanner.py` and the terminal on the right.
 3. **Save to Repo**:

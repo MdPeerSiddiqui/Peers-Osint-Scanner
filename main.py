@@ -5,7 +5,7 @@ Master CLI Toolkit: Social Engineering Attack & Defense Suite
 =============================================================================
 Usage:
     python main.py                       # Interactive launcher menu
-    python main.py osint google.com      # Run Day 1 directly
+    python main.py osint example.com     # Run Day 1 directly
 =============================================================================
 """
 
