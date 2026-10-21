@@ -4,9 +4,32 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Local Backup & Internship PDF (Kept safely on local PC only)
+# Standalone Day Tool Repositories (Independent tools for GitHub)
+day02_email_harvesting/
+day03_*/
+day04_*/
+day05_*/
+day06_*/
+day07_*/
+day08_*/
+day09_*/
+day10_*/
+day11_*/
+day12_*/
+day13_*/
+day14_*/
+day15_*/
+scripts/
 _curriculum_backup/
+
+# Internship Syllabus PDF
 Sqrock_Cybersecurity_Internship_phase1.pdf
+
+# Other Day Reports (Tracked in respective tool repos)
+reports/day02*
+reports/Day02*
+reports/day03*
+reports/Day03*
 
 # System & IDE
 .vscode/
